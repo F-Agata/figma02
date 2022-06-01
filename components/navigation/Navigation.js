@@ -28,7 +28,7 @@ const Navigation = () => {
             <Link href={`/`}><Logo /></Link>
             {!modificationMenuSize &&
             <Box
-                // border={'green 2px solid'}
+                border={'green 2px solid'}
                   display={'flex'}
             >
                 <BoxIcon  width={40} height={40} bg={'colorWhite'} ml={10}><StyledMdOutlineManageAccounts /></BoxIcon>
@@ -49,7 +49,7 @@ const Navigation = () => {
 export default Navigation;
 
 const BoxNavigation = styled(Box)`
-    border: 2px solid red;
+    //border: 2px solid red;
   position: fixed;
   top: 0px;
   display: flex; 

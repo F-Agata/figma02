@@ -8,27 +8,32 @@ import Link from "../styles/Link"
 const Home = () => {
 
     return (
-        <Box >
-          <BgxBg pt={100}
+        <Box border={'green 2px solid'}>
+          <BgxBg border={'green 2px solid'}
+              pt={100}
           overflow={'hidden'}>
-              <Box >
+              <Box border={'yellow 2px solid'}
+                   display={'flex'}
+                   justifyContent={'center'}
+                   alignItems={'center'}
+                   mt={40}
+              >
                   <HeaderImg src={'home/womenWithPaintingSmall.png'} alt={"photo"} />
               </Box>
-              <Box >
-                  <ArrowImg src={'arrowTwisting.png'} alt={"photo"} />
-              </Box>
-              <Box >
-                  <GiftImg src={'gift.png'} alt={"photo"} />
-              </Box>
-              <Box >
-                  <OrnamentImg src={' ornament.png'} alt={"photo"} />
-              </Box>
-
-              <Link href={`/freeTrial`}>
-                  <Btn variant="orangeDark"  ml={0}> More...</Btn>
-              </Link>
-
          </BgxBg>
+            <Box >
+                <ArrowImg src={'arrowTwisting.png'} alt={"photo"} />
+            </Box>
+            <Box >
+                <GiftImg src={'gift.png'} alt={"photo"} />
+            </Box>
+            <Box >
+                <OrnamentImg src={' ornament.png'} alt={"photo"} />
+            </Box>
+
+            <Link href={`/freeTrial`}>
+                <Btn variant="orangeDark"  ml={0}> More...</Btn>
+            </Link>
 
             
         </Box>
@@ -47,7 +52,7 @@ const BgxBg = styled(Box)`
 `
 
 const HeaderImg = styled.img`
-width: 100%
+width: 80%
 `
 
 const ArrowImg = styled.img`
