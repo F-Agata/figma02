@@ -2,21 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b59b2bd1-a3bc-4604-8bd3-49f36640b6ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/GoToTopOfPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/bg1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/iconUpArrow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/Box.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/Btn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/GlobalStyle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/Link.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/TitleAndText.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/breakpoints.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Logo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/navigation/LinksPart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/navigation/NavSmall.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/navigation/Navigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/navigation/menuItems.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/BoxIcon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/gift.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Btn.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Btn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/theme.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,14 +42,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/styles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/components" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/styles" />
       <recent name="$PROJECT_DIR$/components" />
+      <recent name="$PROJECT_DIR$/components/navigation" />
+      <recent name="$PROJECT_DIR$/styles" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -85,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653912932749</updated>
       <workItem from="1653912936153" duration="554000" />
-      <workItem from="1653913763656" duration="8042000" />
+      <workItem from="1653913763656" duration="22520000" />
     </task>
     <servers />
   </component>
@@ -102,5 +102,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/components/navigation/Navigation.js</url>
+          <line>54</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

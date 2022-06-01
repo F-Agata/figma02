@@ -4,7 +4,7 @@ import GlobalStyle from "../styles/GlobalStyle";
 import Box from '../styles/Box'
 
 
-// import Navigation from "../components/navigation/Navigation";
+import Navigation from "../components/navigation/Navigation";
 
 import {ThemeProvider} from "styled-components";
 import GoToTopOfPage from "../components/GoToTopOfPage";
@@ -24,9 +24,10 @@ function MyApp({ Component, pageProps }) {
            display={'flex'}
            flexDirection={'column'}
            justifyContent={'space-between'}
-          // border={'orange 2px solid'}
+          border={'orange 2px solid'}
+       
       >
-        {/*<Navigation />*/}
+        <Navigation />
         <Component {...pageProps} />
         <GoToTopOfPage/>
       </Box>

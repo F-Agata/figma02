@@ -8,8 +8,10 @@ export default {
     colorBtn2: "#AD8780",
     colorWhite: "#FFFFFF",
     colorLight: "#F3E4E1",
-
   },
+    gradients: {
+        gradientBtn: "linear-gradient(124deg, rgba(252,140,95,1) 0%, rgba(250,120,70,1) 100%)",
+    },
  fontWeights: {
     fontRegular: `300`,
     fontBold: `600`,
@@ -35,3 +37,5 @@ export default {
   },
   breakpoints,
  };
+
+
