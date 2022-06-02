@@ -23,8 +23,10 @@ export default {
     fs3: "36px",
     fs4: "30px",
     fs5: "20px",
-    fs7: "16px",
     fs6: "18px",
+    fs7: "16px", 
+    fs8: "10px",  
+  
   },
   lineHeight: {
     lh1: "120%",
@@ -34,6 +36,7 @@ export default {
     lh5: "120%",
     lh6: "120%",
     lh7: "120%",
+    lh8: "120%",
   },
   breakpoints,
  };

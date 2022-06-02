@@ -24,8 +24,8 @@ function MyApp({ Component, pageProps }) {
            display={'flex'}
            flexDirection={'column'}
            justifyContent={'space-between'}
-          border={'orange 2px solid'}
-       
+          // border={'orange 2px solid'}
+
       >
         <Navigation />
         <Component {...pageProps} />

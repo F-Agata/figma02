@@ -28,7 +28,7 @@ const Navigation = () => {
             <Link href={`/`}><Logo /></Link>
             {!modificationMenuSize &&
             <Box
-                border={'green 2px solid'}
+                // border={'green 2px solid'}
                   display={'flex'}
             >
                 <BoxIcon  width={40} height={40} bg={'colorWhite'} ml={10}><StyledMdOutlineManageAccounts /></BoxIcon>
@@ -61,12 +61,6 @@ const BoxNavigation = styled(Box)`
   padding:  10px 20px; 
   z-index: 100;
   background-color: transparent;
-  // ${({ theme }) => css`
-  //   background-color: ${theme.colors.colorWhite};
-  // `};
-  //@media (min-width: 768px) {
-  //  padding:  0 40px;
-  //}
 `
 
 const StyledFaBars = styled(FaBars)`

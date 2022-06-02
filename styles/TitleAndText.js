@@ -54,6 +54,11 @@ const TitleAndText = styled.p`
               lineHeight: "lh7",
               fontWeight: "fontBold"
             },
+            textSmallVery: {
+              fontSize: "fs8",
+              lineHeight: "lh8",
+              fontWeight: "fontRegular"
+            },
                        
           }
       })
