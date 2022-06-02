@@ -11,7 +11,7 @@ const HomeSmall = () => {
 
     return (
         <Box
-            border={'green 2px solid'}
+            // border={'green 2px solid'}
 
             // height={'100vh'}
             display={'flex'}
@@ -25,16 +25,26 @@ const HomeSmall = () => {
                     display={'flex'}
                     justifyContent={'center'}
                     alignItems={'center'}
+
                     // pb={"10px"}
                 >
-                   <HeaderImg src={'home/womenWithPaintingSmall01.png'} alt={"photo"} />
+                   <HeaderImg src={'home/womenWithPaintingBig01.png'} alt={"photo"} />
                 </Box>
 
                 <BoxWrappOrnament>
                     <OrnamentImg src={' ornament.png'} alt={"photo"} />
                     <BoxWrappTextInsideOrnament>
-                        <TitleAndText variant={'textSmallVery'}  textAlign={'center'}>Lorem ipsum</TitleAndText>
-                        <TitleAndText variant={'textSmallVery'} textAlign={'center'} color={'colorSecondary'}> consectetur ac mattist</TitleAndText>
+
+                        <TitleAndText
+                            variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
+                            // variant={'textSmallVery'}
+                            textAlign={'center'}
+                            // pb={{_: '0', mobileL: '10px', }}
+                        >Lorem ipsum</TitleAndText>
+                        <TitleAndText
+                            variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
+                            // variant={'textSmallVery'}
+                            textAlign={'center'} color={'colorSecondary'}> consectetur ac mattist</TitleAndText>
                     </BoxWrappTextInsideOrnament>
                 </BoxWrappOrnament>
 
@@ -56,12 +66,13 @@ const HomeSmall = () => {
             <Box
                 // height={{_: '50% ', mobileL: '35%', }}
 
-                border={'pink 2px solid'}
+                // border={'pink 2px solid'}
                 display={'flex'}
                 flexDirection={'column'}
                 justifyContent={'center'}
                 alignItems={'center'}
-                p={'0 20px'}
+                p={{_: '0px 20px', mobileL: '0px 40px', }}
+
             >
                 <TitleAndText variant={"title3"}  textAlign={'center'} m={"100px 0 20px 0"}> <TitleAndText as="span"   color={'colorSecondary'}>Lorem ipsum</TitleAndText> dolor sit amet</TitleAndText>
                 <TitleAndText variant={"textSmallBold"}  textAlign={'center'} mb={20}><TitleAndText as="span"  color={'colorSecondary'}>Donec luctus tortor</TitleAndText>  consectetur adipiscing elit. Suspendisse massa.
@@ -105,14 +116,14 @@ width: 80%;
 const BoxWrappArrow = styled(Box)`
    //border: yellow 2px solid;
   position: absolute;
-  width: 30%;
+  width: 20%;
   top: 30%;
-  left: 20%;
+  left: 28%;
   z-index: 2;
   @media (min-width: 568px) {
-    width: 35%;
-    top: 10%;
-    left: 10%;
+    width: 20%;
+    top: 24%;
+    left: 30%;
   }
 `
 
@@ -124,13 +135,13 @@ const BoxWrappGift = styled(Box)`
   // border: yellow 2px solid;
   position: absolute;
   width: 20%;
-  top: 20%;
-  left: 20%;
+  top: 18%;
+  left: 5%;
   z-index: 2;
   @media (min-width: 568px) {
-    width: 25%;
+    width: 20%;
     top: 10%;
-    left: 10%;
+    left: 5%;
   }
 `
 
@@ -152,10 +163,15 @@ const BoxWrappOrnament = styled(Box)`
   `
 
 const BoxWrappTextInsideOrnament = styled(Box)`
+  width: 70%;
+  //border: yellow 2px solid;
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, 0);
+  @media (min-width: 568px) {
+    top: 18%;
+      }
 `
 
 const OrnamentImg = styled.img`
@@ -163,11 +179,15 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-   //border: yellow 2px solid;
+   // border: yellow 2px solid;
   position: absolute;
   width: 40%;
-  bottom: -25%;
-  left: 50%;
+ top: 35%;
+  left: 24%;
   transform: translate(-50%, 0);
   z-index: 2;
+  @media (min-width: 568px) {
+    width: 42%;
+    top: 30%;
+  }
 `

@@ -16,7 +16,7 @@ const Home = () => {
 
     return (
         <Box
-            border={'green 2px solid'}
+            // border={'green 2px solid'}
         >
             {!modificationPage && <HomeSmall/>}
             {modificationPage && <HomeBig/>}
