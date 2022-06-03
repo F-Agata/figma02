@@ -26,7 +26,7 @@ const LinksPart = ( {menuItems} ) => {
             // border={'orange 2px solid'}
             flexGrow={'1'}
             display={'flex'}
-            justifyContent={'flex-end'}
+            justifyContent={'center'}
             alignItems={'center'}
         >
             <StyledNavigationUl >

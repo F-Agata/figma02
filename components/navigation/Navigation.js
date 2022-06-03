@@ -49,9 +49,11 @@ const Navigation = () => {
 export default Navigation;
 
 const BoxNavigation = styled(Box)`
-    border: 2px solid red;
+    //border: 2px solid red;
   position: fixed;
   top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
   display: flex; 
   justify-content: space-between;
   align-items: center;
@@ -59,6 +61,8 @@ const BoxNavigation = styled(Box)`
   width: 100%;
   height: 70px;
   padding:  10px 20px; 
+  max-width: 1140px;
+  margin: 0 auto;
   z-index: 100;
   background-color: transparent;
 `

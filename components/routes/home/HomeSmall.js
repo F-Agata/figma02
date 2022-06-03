@@ -49,11 +49,11 @@ const HomeSmall = () => {
                 </BoxWrappOrnament>
 
                 <BoxWrappArrow>
-                    <ArrowImg src={'arrowTwisting01.png'} alt={"photo"} />
+                    <ArrowImg src={'arrowTwisting01.png'} alt={"arrow"} />
                 </BoxWrappArrow>
 
                 <BoxWrappGift>
-                    <GiftImg src={'gift.png'} alt={"photo"} />
+                    <GiftImg src={'gift.png'} alt={"gift"} />
                 </BoxWrappGift>
 
                 <BoxWrappTxt>
@@ -159,7 +159,7 @@ const BoxWrappOrnament = styled(Box)`
   transform: translate(-50%, 0);
   z-index: 2;
   @media (min-width: 568px) {
-    width: 36%;
+    width: 34%;
   }
   `
 

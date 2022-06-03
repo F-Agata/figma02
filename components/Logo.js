@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 import Box from '../styles/Box'
+import Link from '../styles/Link'
 
 const Logo = (  ) => {
   
     return (
         <BoxLogo >
-         <LogoIcon src={'logo.svg'} alt={"logo"} />
+            <Link href={`/home`}>
+                  <LogoIcon src={'logo.svg'} alt={"logo"} />
+            </Link>
         </BoxLogo>
     );
 };
