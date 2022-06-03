@@ -8,6 +8,8 @@ import Box from '../../styles/Box'
 import BoxIcon from '../../styles/BoxIcon'
 import Link from "../../styles/Link";
 import Logo from "../Logo"
+import AccountIcons from "./AccountIcons"
+import SocialIcons from "./SocialIcons"
 import menuItems from './menuItems'
 import LinksPart from "./LinksPart";
 import NavSmall from "./NavSmall";
@@ -16,8 +18,11 @@ const Navigation = () => {
 
     const [smallNavIsOpen, setSmallNavIsOpen] = useState(false)
 
+    const needOpenIcon = true
+
     // const modificationMenuSize = useMediaQuery({ query: `${props => props.theme.breakpoints.tablet} `})
     const modificationMenuSize = useMediaQuery({ query: '(min-width: 768px)'})
+    const addSocialIcons = useMediaQuery({ query: '(min-width: 1024px)'})
 
     const changeNav = () => {
         setSmallNavIsOpen(!smallNavIsOpen)
@@ -26,17 +31,12 @@ const Navigation = () => {
     return (
         <BoxNavigation >
             <Link href={`/`}><Logo /></Link>
+            {addSocialIcons && <SocialIcons  bigMenu/>}
             {!modificationMenuSize &&
-            <Box
-                // border={'green 2px solid'}
-                  display={'flex'}
-            >
-                <BoxIcon  width={40} height={40} bg={'colorWhite'} ml={10}><StyledMdOutlineManageAccounts /></BoxIcon>
-                <BoxIcon  width={40} height={40} bg={'colorSecondary'} ml={10}><StyledBiCart /></BoxIcon>
-                <BoxIcon  onClick={changeNav} width={40} height={40} bg={'colorWhite'} ml={10}><StyledFaBars /></BoxIcon>
-            </Box>
+              <AccountIcons changeNav={changeNav} needOpenIcon={needOpenIcon}/>
             }
             {modificationMenuSize && <LinksPart menuItems={menuItems}/>}
+            {modificationMenuSize && <AccountIcons/>}
             {!modificationMenuSize && smallNavIsOpen  ?
                 <NavSmall menuItems={menuItems}
                           setSmallNavIsOpen={setSmallNavIsOpen}
@@ -49,7 +49,7 @@ const Navigation = () => {
 export default Navigation;
 
 const BoxNavigation = styled(Box)`
-    //border: 2px solid red;
+    border: 2px solid red;
   position: fixed;
   top: 0px;
   display: flex; 
@@ -61,26 +61,4 @@ const BoxNavigation = styled(Box)`
   padding:  10px 20px; 
   z-index: 100;
   background-color: transparent;
-`
-
-const StyledFaBars = styled(FaBars)`
-   ${({ theme }) => css`
-    background-color: ${theme.colors.colorWhite};
-    color: ${theme.colors.colorPrimary};
-    font-size: ${theme.fontSizes.fs5};
-  `};
-`
-const StyledBiCart = styled(BiCart)`
-   ${({ theme }) => css`
-    background-color: ${theme.colors.colorSecondary};
-    color: ${theme.colors.colorWhite};
-    font-size: ${theme.fontSizes.fs5};
-  `};
-`
-const StyledMdOutlineManageAccounts = styled(MdOutlineManageAccounts)`
-   ${({ theme }) => css`
-    background-color: ${theme.colors.colorWhite};
-    color: ${theme.colors.colorSecondary};
-    font-size: ${theme.fontSizes.fs5};
-  `};
 `

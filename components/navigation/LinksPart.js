@@ -2,9 +2,7 @@
 import styled, { css } from "styled-components";
 import { useMediaQuery } from 'react-responsive'
 
-import {BiCart} from "react-icons/bi";
-import {MdOutlineManageAccounts} from "react-icons/md";
-import {FaFacebook, FaInstagram, FaTwitter} from "react-icons/fa";
+
 
 import Box from "../../styles/Box";
 import Link from "../../styles/Link";
@@ -14,7 +12,6 @@ import Btn from "../../styles/Btn";
 
 const LinksPart = ( {menuItems} ) => {
 
-    const addBtn = useMediaQuery({ query: '(min-width: 1024px)'})
 
     const menuItem = menuItems.map((item) => (
         <StyledNavigationLi key={item.id}>
@@ -36,7 +33,7 @@ const LinksPart = ( {menuItems} ) => {
                 {menuItem}
             </StyledNavigationUl>
 
-            {addBtn &&  <Link href={`/freeTrial`}><Btn variant="dark" ml={20}> Free trial</Btn></Link>}
+          
         </Box>
     );
 };
@@ -79,19 +76,4 @@ margin-left: 10px;
 }
 `
 
-const StyledMdOutlineManageAccounts = styled(MdOutlineManageAccounts)`
-   ${({ theme }) => css`
-    background-color: ${theme.colors.colorWhite};
-    color: ${theme.colors.colorSecondary};
-    font-size: ${theme.fontSizes.fs5};
-  `};
-`
-
-const StyledBiCart = styled(BiCart)`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.colorSecondary};
-    color: ${theme.colors.colorWhite};
-    font-size: ${theme.fontSizes.fs5};
-  `};
-`
 

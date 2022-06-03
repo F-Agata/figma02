@@ -5,9 +5,10 @@ import { useMediaQuery } from 'react-responsive'
 import {GrClose} from "react-icons/gr";
 import {BiCart} from "react-icons/bi";
 import {MdOutlineManageAccounts} from "react-icons/md";
-import {FaFacebook, FaInstagram, FaTwitter} from "react-icons/fa";
 
 import Logo from '../Logo'
+import SocialIcons from "./SocialIcons"
+import AccountIcons from "./AccountIcons"
 
 import Box from '../../styles/Box';
 import BoxIcon from '../../styles/BoxIcon';
@@ -16,6 +17,8 @@ import Link from "../../styles/Link";
 import TitleAndText from "../../styles/TitleAndText";
 
 const NavSmall = ( {menuItems, setSmallNavIsOpen, changeNav} ) => {
+
+    const needCloseIcon = true;
 
     const menuItem = menuItems.map((item) => (
         <StyledNavigationLi key={item.id}>
@@ -62,42 +65,13 @@ const NavSmall = ( {menuItems, setSmallNavIsOpen, changeNav} ) => {
                  pb={40}
              >
                 <Logo />
-                 <Box
-                     // border={'green 2px solid'}
-                     display={'flex'}
-
-                 >
-                     <BoxIcon  width={40} height={40} bg={'colorWhite'} ml={10}><StyledMdOutlineManageAccounts /></BoxIcon>
-                     <BoxIcon  width={40} height={40} bg={'colorSecondary'} ml={10}><StyledBiCart /></BoxIcon>
-                     <BoxIcon  onClick={changeNav} width={40} height={40} bg={'colorWhite'} ml={10}><StyledGrClose /></BoxIcon>
-                 </Box>
+                <AccountIcons changeNav={changeNav} needCloseIcon={needCloseIcon}/>
              </Box>
 
             <StyledNavigationUl>
                 {menuItem}
             </StyledNavigationUl>
-            {/*<Box*/}
-            {/*       // border={'green 2px solid'}*/}
-            {/*       width={'100%'}*/}
-            {/*       mb={40}*/}
-            {/*>*/}
-            {/*       <Link href={`/freeTrial`}>*/}
-            {/*           <Btn variant="orangeDark" onClick={changeNav} ml={0} width={'100%'}> More...</Btn>*/}
-            {/*       </Link>*/}
-            {/* </Box>*/}
-
-            <Box
-                width={"100%"}
-                // border={'green 2px solid'}
-                alignSelf={'flex-end'}
-                    display={'flex'}
-                    justifyContent={'space-between'}
-                    maxWidth={300}
-            >
-                     <BoxIcon  width={40} height={40} bg={'colorBtn2'} ><StyledFaFacebook/></BoxIcon>
-                     <BoxIcon  width={40} height={40} bg={'colorBtn2'} ml={10}> <StyledFaTwitter/></BoxIcon>
-                     <BoxIcon  onClick={changeNav} width={40} height={40} bg={'colorBtn2'} ml={10}><StyledFaInstagram/></BoxIcon>
-            </Box>
+            <SocialIcons changeNav={changeNav}/>
            </Box>
         </Box>
     );
@@ -129,48 +103,3 @@ const StyledNavigationLi = styled.li`
    }
   }
 `
-const StyledBiCart = styled(BiCart)`
-   ${({ theme }) => css`
-    background-color: ${theme.colors.colorSecondary};
-    color: ${theme.colors.colorWhite};
-    font-size: ${theme.fontSizes.fs5};
-  `};
-`
-const StyledMdOutlineManageAccounts = styled(MdOutlineManageAccounts)`
-   ${({ theme }) => css`
-    background-color: ${theme.colors.colorWhite};
-    color: ${theme.colors.colorSecondary};
-    font-size: ${theme.fontSizes.fs5};
-  `};
-`
-
-const StyledGrClose = styled(GrClose)`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.colorWhite};
-    color: ${theme.colors.colorPrimary};
-    font-size: ${theme.fontSizes.fs5};
-   `};
-`
-const StyledFaFacebook = styled(FaFacebook)`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.colorBtn2};
-    color: ${theme.colors.colorWhite};
-    font-size: ${theme.fontSizes.fs5};
-   `};
-`
-
-const StyledFaTwitter = styled(FaTwitter)`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.colorBtn2};
-    color: ${theme.colors.colorWhite};
-    font-size: ${theme.fontSizes.fs5};
-   `};
-`
-
-const StyledFaInstagram = styled(FaInstagram)`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.colorBtn2};
-    color: ${theme.colors.colorWhite};
-    font-size: ${theme.fontSizes.fs5};
-   `};
-  `
