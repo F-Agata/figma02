@@ -49,7 +49,7 @@ const HomeSmall = () => {
                 </BoxWrappOrnament>
 
                 <BoxWrappArrow>
-                    <ArrowImg src={'home/arrowTwisting01.png'} alt={"photo"} />
+                    <ArrowImg src={'arrowTwisting01.png'} alt={"photo"} />
                 </BoxWrappArrow>
 
                 <BoxWrappGift>
@@ -101,6 +101,7 @@ const BgxBg = styled(Box)`
   background-image: url('bg2.png');
   background-repeat: no-repeat;
    background-size: cover;
+  background-position: center;
   padding-top: 200px;  
   padding-bottom: 30px;
   position: relative;
@@ -158,7 +159,7 @@ const BoxWrappOrnament = styled(Box)`
   transform: translate(-50%, 0);
   z-index: 2;
   @media (min-width: 568px) {
-    width: 35%;
+    width: 36%;
   }
   `
 

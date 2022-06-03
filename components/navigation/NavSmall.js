@@ -5,6 +5,7 @@ import { useMediaQuery } from 'react-responsive'
 import {GrClose} from "react-icons/gr";
 import {BiCart} from "react-icons/bi";
 import {MdOutlineManageAccounts} from "react-icons/md";
+import {FaFacebook, FaInstagram, FaTwitter} from "react-icons/fa";
 
 import Logo from '../Logo'
 
@@ -15,10 +16,6 @@ import Link from "../../styles/Link";
 import TitleAndText from "../../styles/TitleAndText";
 
 const NavSmall = ( {menuItems, setSmallNavIsOpen, changeNav} ) => {
-
-       // const modificationMenuSize = useMediaQuery({ query: `${props => props.theme.breakpoints.tablet} `})
-
-
 
     const menuItem = menuItems.map((item) => (
         <StyledNavigationLi key={item.id}>
@@ -52,17 +49,23 @@ const NavSmall = ( {menuItems, setSmallNavIsOpen, changeNav} ) => {
                 width={'100%'}
                 p={'40px'}
                 borderBottom={'1px solid '}
-                borderColor={'colorLightFooter'}
+                borderColor={'colorSecondary'}
+                display={'flex'}
+                flexDirection={'column'}
+                justifyContent={'center'}
+                alignItems={'flex-start'}
                 >
-             <Box display={'flex'}
+             <Box width={"100%"}
+                 display={'flex'}
                  justifyContent={'space-between'}
                  alignItems={'center'}
                  pb={40}
              >
-                <Logo color={"dark"}/>
+                <Logo />
                  <Box
                      // border={'green 2px solid'}
                      display={'flex'}
+
                  >
                      <BoxIcon  width={40} height={40} bg={'colorWhite'} ml={10}><StyledMdOutlineManageAccounts /></BoxIcon>
                      <BoxIcon  width={40} height={40} bg={'colorSecondary'} ml={10}><StyledBiCart /></BoxIcon>
@@ -73,9 +76,28 @@ const NavSmall = ( {menuItems, setSmallNavIsOpen, changeNav} ) => {
             <StyledNavigationUl>
                 {menuItem}
             </StyledNavigationUl>
-            <Link href={`/freeTrial`}>
-                <Btn variant="orangeDark" onClick={changeNav} ml={0}> More...</Btn>
-            </Link>
+            {/*<Box*/}
+            {/*       // border={'green 2px solid'}*/}
+            {/*       width={'100%'}*/}
+            {/*       mb={40}*/}
+            {/*>*/}
+            {/*       <Link href={`/freeTrial`}>*/}
+            {/*           <Btn variant="orangeDark" onClick={changeNav} ml={0} width={'100%'}> More...</Btn>*/}
+            {/*       </Link>*/}
+            {/* </Box>*/}
+
+            <Box
+                width={"100%"}
+                // border={'green 2px solid'}
+                alignSelf={'flex-end'}
+                    display={'flex'}
+                    justifyContent={'space-between'}
+                    maxWidth={300}
+            >
+                     <BoxIcon  width={40} height={40} bg={'colorBtn2'} ><StyledFaFacebook/></BoxIcon>
+                     <BoxIcon  width={40} height={40} bg={'colorBtn2'} ml={10}> <StyledFaTwitter/></BoxIcon>
+                     <BoxIcon  onClick={changeNav} width={40} height={40} bg={'colorBtn2'} ml={10}><StyledFaInstagram/></BoxIcon>
+            </Box>
            </Box>
         </Box>
     );
@@ -94,17 +116,15 @@ const StyledNavigationUl = styled.ul`
 const StyledNavigationLi = styled.li`
     //border: lightcoral 2px solid;
     padding: 20px 0;
-   //text-decoration: none;
-  list-style: none;
+   list-style: none;
   cursor: pointer;
   transition: 0.3s;
    :hover p {
-    //display: inline;
     ${({ theme }) => css`
     //color: ${theme.colors.colorSecondary};
     font-weight: ${theme.fontWeights.fontBold}; 
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-     
+    
   `};
    }
   }
@@ -131,3 +151,26 @@ const StyledGrClose = styled(GrClose)`
     font-size: ${theme.fontSizes.fs5};
    `};
 `
+const StyledFaFacebook = styled(FaFacebook)`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.colorBtn2};
+    color: ${theme.colors.colorWhite};
+    font-size: ${theme.fontSizes.fs5};
+   `};
+`
+
+const StyledFaTwitter = styled(FaTwitter)`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.colorBtn2};
+    color: ${theme.colors.colorWhite};
+    font-size: ${theme.fontSizes.fs5};
+   `};
+`
+
+const StyledFaInstagram = styled(FaInstagram)`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.colorBtn2};
+    color: ${theme.colors.colorWhite};
+    font-size: ${theme.fontSizes.fs5};
+   `};
+  `
