@@ -21,9 +21,9 @@ const HomeBig = () => {
         >
             <BgxBg>
               <Box width={"100%"}
-              maxWidth={1140}
-              p={'0px 20px'}
-              m={"0 auto"}
+                    maxWidth={1140}
+                    p={'0px 20px'}
+                    m={"0 auto"}
                    display={'flex'}
                    justifyContent={'space-between'}
                    alignItems={'stretch'}
@@ -31,7 +31,7 @@ const HomeBig = () => {
 
                 <Box
                     width={{_: '40%', tabletL: '40%', laptopS: '40%' }}
-                    border={'pink 2px solid'}
+                    // border={'pink 2px solid'}
                     display={'flex'}
                     flexDirection={'column'}
                     justifyContent={'center'}
@@ -56,11 +56,11 @@ const HomeBig = () => {
 
                 <Box
                     width={{_: '60%', tabletL: '50%', laptopS: '50%' }}
-                    border={'yellow 2px solid'}
+                    // border={'yellow 2px solid'}
                     display={'flex'}
                     justifyContent={'center'}
                     alignItems={'flex-end'}
-                    p={{_: '120px 0px 42px 0px', tabletL: '120px 0px 45px 0px', laptopS: '120px 0px 50px 0px', }}
+                    p={{_: '200px 0px 48px 0px', tabletL: '120px 0px 43px 0px', laptopS: '120px 0px 45px 0px', }}
                 >
                     <HeaderImg src={'home/womenWithPaintingBig01.png'} alt={"photo"} />
                 </Box>
@@ -70,12 +70,14 @@ const HomeBig = () => {
                     <BoxWrappTextInsideOrnament>
 
                         <TitleAndText
-                            variant={{_: 'textSmallVery', tabletL: 'textSmall', }}
+                            variant={'textSmall'}
+                            // variant={{_: 'textSmallVery', tabletL: 'textSmall', }}
                             textAlign={'center'}
                             // pb={{_: '0', mobileL: '10px', }}
                         >Lorem ipsum</TitleAndText>
                         <TitleAndText
-                            variant={{_: 'textSmallVery', tabletL: 'textSmall', }}
+                            variant={'textSmall'}
+                            // variant={{_: 'textSmallVery', tabletL: 'textSmall', }}
                             textAlign={'center'} color={'colorSecondary'}> consectetur ac mattist</TitleAndText>
                     </BoxWrappTextInsideOrnament>
                 </BoxWrappOrnament>
@@ -126,15 +128,19 @@ width: 100%;
 const BoxWrappArrow = styled(Box)`
    //border: yellow 2px solid;
   position: absolute;
-  width: 10%;
-  top: 28%;
-  left: 50%;
+  width: 20%;
+  top: 25%;
+  left: 40%;
   z-index: 2;
   @media (min-width: 1024px) {
-    width: 10%;
-    top: 24%;
-    left: 50%;
+    width: 14%;
+    top: 80%;
+    left: 25%;
   }
+  @media (min-width: 1140px) {
+    width: 14%;
+    top: 82%;
+    left: 28%;
 `
 
 const ArrowImg = styled.img`
@@ -146,14 +152,18 @@ const BoxWrappGift = styled(Box)`
   position: absolute;
   width: 10%;
   top: 13%;
-  left: 36%;
+  left: 30%;
   z-index: 2;
   @media (min-width: 1024px) {
     width: 10%;
-    top: 10%;
-    left: 35%;
+    top: 50%;
+    left: 40%;
   }
-`
+@media (min-width: 1140px) {
+   width: 8%;
+  top: 50%;
+  left: 40%;
+  `
 
 const GiftImg = styled.img`
   width: 100%
@@ -164,34 +174,41 @@ const BoxWrappOrnament = styled(Box)`
   position: absolute;
   width: 18%;
   top: 13%;
-  right: -8%;
+  right: -5%;
   transform: translate(-50%, 0);
   z-index: 2;
   @media (min-width: 1024px) {
-    width: 10%;
-    top: 14%;
-    right: -8%;
+    width: 16%;
+    top: 10%;
+    right: 38%;
   }
-  //@media (min-width: 1140px) {
-  //  width: 35%;
-  //}
-  `
+  @media (min-width: 1140px) {
+    width: 15%;
+    top: 12%;
+    right: -7%;
+  }
+  @media (min-width: 1366px) {
+    width: 15%;
+    top: 12%;
+    right: -3%;
+  }
+    `
 
 const BoxWrappTextInsideOrnament = styled(Box)`
-  width: 70%;
+  width: 80%;
   //border: yellow 2px solid;
   position: absolute;
-  top: 20%;
+  top: 18%;
   left: 50%;
   transform: translate(-50%, 0);
-  //@media (min-width: 1024px) {
-  //  width: 20%;
-  //  top: 24%;
-  //  left: 30%;
-  //}
-  //@media (min-width: 1140px) {
-  //  top: 18%;
-  //    }
+  @media (min-width: 1024px) {
+    width: 82%;
+    top: 15%;
+      }
+  @media (min-width: 1140px) {
+    width: 70%;
+    top: 18%;
+      }
 `
 
 const OrnamentImg = styled.img`
@@ -203,16 +220,17 @@ const BoxWrappTxt = styled(Box)`
   position: absolute;
   width: 20%;
  top: 15%;
-  left: 54%;
+  left: 60%;
   transform: translate(-50%, 0);
   z-index: 2;
   @media (min-width: 1024px) {
     width: 20%;
-    top: 24%;
-    left: 30%;
+    top: 70%;
+    left: 40%;
   }
-  //@media (min-width: 1140px) {
-  //  width: 42%;
-  //  top: 30%;
-  //}
+  @media (min-width: 1140px) {
+    wwidth: 20%;
+    top: 70%;
+    left: 40%;
+  }
 `
